@@ -1,14 +1,146 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
+    <title>Title</title>
 
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-<h1>Hello World</h1>
-<p>Hello Git</p>
+<div id="screen">
+    <div class="main">
+        <div class="input_name">
+            <div class="input_button">
+                <input id='name' placeholder="Введіть назву товару" >
+                <button  onclick="createNewProduct()">Додати</button>
+            </div>
+        </div>
+        <div   id="products">
+            <div    id="tomatos" class="product">
+                <div class="product_div">
+                    <div class="name_products">
+                        <span class="span_product_name">Помідори</span>
+                    </div>
+                    <div class="take_add">
+                        <div class="buttons">
+                            <button id="minus1" class="minus"  disabled onclick="to_minus('tomat','minus1','tomato_count')">  -
+                            </button>
+                            <span id="tomat" class="count_select" >1</span>
+                            <button class="plus"  onclick="to_plus('tomat','minus1','tomato_count')">+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="to_buy">
+                        <div class="buttons_two">
+                            <button class="bought"  >Куплено</button>
+                            <button class="delete_product" onclick="remove('products','tomatos','id_all_products','tomato')">X</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div   id="biscuits" class="product">
+                <div class="product_div">
+                    <div class="name_products">
+                        <span class="span_product_name">Печиво</span>
+                    </div>
+                    <div class="take_add">
+                        <div class="buttons">
+                            <button id="minus2" class="minus"  disabled onclick="to_minus('bisc','minus2','biscuits_count')">-
+                            </button>
+                            <span  id="bisc" class="count_select">1</span>
+                            <button class="plus" onclick="to_plus('bisc','minus2','biscuits_count')">+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="to_buy">
+                        <div class="buttons_two">
+                            <button class="bought">Куплено</button>
+                            <button class="delete_product" onclick="remove('products','biscuits','id_all_products','biscuit')">X</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div   id="cheeses" class="product">
+                <div class="product_div">
+                    <div class="name_products">
+                        <span  id="" class="span_product_name">Сир</span>
+                    </div>
+                    <div class="take_add">
+                        <div class="buttons">
+                            <button id="minus3" disabled onclick="to_minus('chees','minus3','cheeses_count')" class="minus">-
+                            </button>
+                            <span  id ="chees" class="count_select">1</span>
+                            <button class="plus"  onclick="to_plus('chees','minus3','cheeses_count')">+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="to_buy">
+                        <div class="buttons_two">
+                            <button class="bought" onclick=editOn()>Куплено</button>
+                            <button class="delete_product" onclick="remove('products','cheeses','id_all_products','cheese')">X</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="basket">
+        <div class="basket_title_ceiling">
+            <h3>
+                Залишилося
+            </h3>
+        </div>
+        <div id="id_all_products" class="all_products">
+              <span id="tomato" class="we_can_buy">
+               <span class="basket_name">
+                   Помідори
+               </span>
+                  <span class="counter" id="tomato_count">
+                      1
+              </span>
+
+              </span>
+            <span id="biscuit" class="we_can_buy">
+                  <span class="basket_name">
+                      Печиво
+                  </span>
+              <span class="counter" id="biscuits_count">
+                      1
+              </span>
+
+              </span>
+            <span id="cheese"  class="we_can_buy">
+                  <span class="basket_name">
+                      Сир
+                  </span>
+                  <span  class="counter" id="cheeses_count">
+                    1
+                  </span>
+              </span>
+
+        </div>
+        <div class="basket_title_floor">
+            <h3>
+                Куплено
+            </h3>
+        </div>
+        <div class="has_bought">
+
+        </div>
+
+    </div>
+</div>
 </body>
 </html>
