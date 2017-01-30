@@ -12,8 +12,8 @@
     <div class="main">
         <div class="input_name">
             <div class="input_button">
-                <input id='name' placeholder="Введіть назву товару" >
-                <button  onclick="createNewProduct()">Додати</button>
+                <input id='name' class="tip" placeholder="Введіть назву товару" >
+                <button id="confirm" class="tip"  data-tooltip="Додати новий продукт" onclick="createNewProduct()">Додати</button>
             </div>
         </div>
         <div   id="products">
@@ -24,18 +24,18 @@
                     </div>
                     <div class="take_add">
                         <div class="buttons">
-                            <button id="minus1" class="minus"  disabled onclick="to_minus('tomat','minus1','tomato_count')">  -
+                            <button id="minus1"  data-tooltip="Відняти " class="minus tip"  disabled onclick="to_minus('tomat','minus1','tomato_count')">  -
                             </button>
                             <span id="tomat" class="count_select" >1</span>
-                            <button class="plus"  onclick="to_plus('tomat','minus1','tomato_count')">+
+                            <button class="plus tip"  data-tooltip="Додати"  onclick="to_plus('tomat','minus1','tomato_count')">+
                             </button>
                         </div>
                     </div>
 
                     <div class="to_buy">
                         <div class="buttons_two">
-                            <button class="bought">Куплено</button>
-                            <button class="delete_product" onclick="remove('products','tomatos','id_all_products','tomato')">X</button>
+                            <button  data-tooltip="Купити"  class="bought tip">Куплено</button>
+                            <button   data-tooltip="Видалити" class="delete_product tip" onclick="remove('products','tomatos','id_all_products','tomato')">X</button>
                         </div>
 
                     </div>
@@ -49,18 +49,18 @@
                     </div>
                     <div class="take_add">
                         <div class="buttons">
-                            <button id="minus2" class="minus"  disabled onclick="to_minus('bisc','minus2','biscuits_count')">-
+                            <button id="minus2"   data-tooltip="Відняти" class="minus tip"  disabled onclick="to_minus('bisc','minus2','biscuits_count')">-
                             </button>
-                            <span  id="bisc" class="count_select">1</span>
-                            <button class="plus" onclick="to_plus('bisc','minus2','biscuits_count')">+
+                            <span  id="bisc" class="count_select ">1</span>
+                            <button class="plus tip"  data-tooltip="Додати" onclick="to_plus('bisc','minus2','biscuits_count')">+
                             </button>
                         </div>
                     </div>
 
                     <div class="to_buy">
                         <div class="buttons_two">
-                            <button class="bought">Куплено</button>
-                            <button class="delete_product" onclick="remove('products','biscuits','id_all_products','biscuit')">X</button>
+                            <button   data-tooltip="Купити" class="bought  tip">Куплено</button>
+                            <button  data-tooltip="Видалити" class="delete_product tip" onclick="remove('products','biscuits','id_all_products','biscuit')">X</button>
                         </div>
 
                     </div>
@@ -75,18 +75,18 @@
                     </div>
                     <div class="take_add">
                         <div class="buttons">
-                            <button id="minus3" disabled onclick="to_minus('chees','minus3','cheeses_count')" class="minus">-
+                            <button id="minus3"  data-tooltip="Відняти" disabled onclick="to_minus('chees','minus3','cheeses_count')" class="minus tip">-
                             </button>
                             <span  id ="chees" class="count_select">1</span>
-                            <button class="plus"  onclick="to_plus('chees','minus3','cheeses_count')">+
+                            <button class="plus tip"  data-tooltip="Додати" onclick="to_plus('chees','minus3','cheeses_count')">+
                             </button>
                         </div>
                     </div>
 
                     <div class="to_buy">
                         <div class="buttons_two">
-                            <button class="bought" onclick=editOn()>Куплено</button>
-                            <button class="delete_product" onclick="remove('products','cheeses','id_all_products','cheese')">X</button>
+                            <button   data-tooltip="Купити" class="bought tip" onclick=editOn()>Куплено</button>
+                            <button  data-tooltip="Видалити" class="delete_product tip" onclick="remove('products','cheeses','id_all_products','cheese')">X</button>
                         </div>
 
                     </div>
