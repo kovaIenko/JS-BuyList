@@ -289,47 +289,47 @@ body{
       position: absolute;
       visibility: hidden;
       opacity: 0;
-      transition:  opacity 1s;
+      transition: width 2s,height 2s,bottom 5s, opacity 3s, transform 5s,1s;
   }
 
 .tip:before {
-
     margin-bottom: -5px;
-    margin-left: -80px;
-    padding: 7px;
-    bottom: 150%;
+    margin-left: -50px;
+    padding: 3px;
+    bottom: 100%;
     left: 50%;
-    width: 160px;
-    border-radius: 3px;
+    width: 90px;
+    border-radius: 4px;
     background-color:  blueviolet;
       color: white;
     content: attr(data-tooltip);
     text-align: center;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.2
 
 }
 
 
    .tip:after {
-       bottom: 150%;
+       bottom: 100%;
     left: 50%;
     margin-left: -5px;
     margin-bottom: -10px;
-
     /*робимо трикутник*/
     border-top: 5px solid  blueviolet;   /*генератор трикутників*/
     border-top: 5px solid hsla(0, 0%, 20%, 0.9);
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-
     content: " ";
 
+
 }
 
-.tip:hover:before,
-.tip:hover:after {
-    visibility: visible;
-    opacity: 0.8;
-}
+ .tip:hover:after ,.tip:hover:before{
 
+     visibility: visible;
+     opacity: 1;
+     bottom: 150%;
+     transform-origin: center 100%;
+     transform: scale(1.1); /*букви не одразу чіткі, думаю, через scale */
+ }
