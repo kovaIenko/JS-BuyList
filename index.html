@@ -5,96 +5,20 @@
     <title>Title</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+
+
 </head>
 <body>
 <div id="screen">
     <div class="main">
         <div class="input_name">
             <div class="input_button">
-                <input id='name' class="tip" placeholder="Введіть назву товару" >
-                <button id="confirm" class="tip"  data-tooltip="Додати новий продукт" >Додати</button>
+                <input class="name tip" placeholder="Введіть назву товару">
+                <button class="confirm  tip" data-tooltip="Додати новий продукт">Додати</button>
             </div>
         </div>
-        <div   id="products">
-            <div   class="product">
-                <div class="product_div">
-                    <div class="name_products">
-                        <span class="span_product_name">Помідори</span>
-                    </div>
-                    <div class="take_add">
-                        <div class="buttons">
-                            <button  data-tooltip="Відняти " class="minus tip"  disabled>  -
-                            </button>
-                            <span  class="count_select" >1</span>
-                            <button class="plus tip"  data-tooltip="Додати"  >+
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="to_buy">
-                        <div class="buttons_two">
-                            <button  data-tooltip="Купити"  class="bought tip">Куплено</button>
-                            <button   data-tooltip="Видалити" class="delete_product tip" >X</button>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div   id="biscuits" class="product">
-                <div class="product_div">
-                    <div class="name_products">
-                        <span class="span_product_name">Печиво</span>
-                    </div>
-                    <div class="take_add">
-                        <div class="buttons">
-                            <button    data-tooltip="Відняти" class="minus tip"  disabled >-
-                            </button>
-                            <span   class="count_select ">1</span>
-                            <button class="plus tip"  data-tooltip="Додати">+
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="to_buy">
-                        <div class="buttons_two">
-                            <button   data-tooltip="Купити" class="bought  tip">Куплено</button>
-                            <button  data-tooltip="Видалити" class="delete_product tip" >X</button>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-            <div   id="cheeses" class="product">
-                <div class="product_div">
-                    <div class="name_products">
-                        <span  id="" class="span_product_name">Сир</span>
-                    </div>
-                    <div class="take_add">
-                        <div class="buttons">
-                            <button id="minus3"  data-tooltip="Відняти" disabled class="minus tip">-
-                            </button>
-                            <span  id ="chees" class="count_select">1</span>
-                            <button class="plus tip"  data-tooltip="Додати">+
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="to_buy">
-                        <div class="buttons_two">
-                            <button   data-tooltip="Купити" class="bought tip">Куплено</button>
-                            <button  data-tooltip="Видалити" class="delete_product tip">X</button>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+        <div class="products">
         </div>
-
     </div>
     <div class="basket">
         <div class="basket_title_ceiling">
@@ -102,33 +26,8 @@
                 Залишилося
             </h3>
         </div>
-        <div id="id_all_products" class="all_products">
-              <span id="tomato" class="we_can_buy">
-               <span class="basket_name">
-                   Помідори
-               </span>
-                  <span class="counter" id="tomato_count">
-                      1
-              </span>
+        <div class="all_products">
 
-              </span>
-            <span id="biscuit" class="we_can_buy">
-                  <span class="basket_name">
-                      Печиво
-                  </span>
-              <span class="counter" id="biscuits_count">
-                      1
-              </span>
-
-              </span>
-            <span id="cheese"  class="we_can_buy">
-                  <span class="basket_name">
-                      Сир
-                  </span>
-                  <span  class="counter" id="cheeses_count">
-                    1
-                  </span>
-              </span>
 
         </div>
         <div class="basket_title_floor">
@@ -143,13 +42,77 @@
     </div>
 </div>
 
-    <div class="general_inner">
-        <div id="one_box" class="box">
-          <h3>Buy List</h3>
-        </div>
-        <div id="two_box" class="box">
-         <h4>Created by:<br>Kovalenko</h4>
-        </div>
+<div class="general_inner">
+    <div id="one_box" class="box">
+        <h3>Buy List</h3>
+    </div>
+    <div id="two_box" class="box">
+        <h4>Created by:<br>Kovalenko</h4>
+    </div>
 </div>
+<div style="display: none" class="unvisible">
+    <div class="product">
+        <div class="product_div">
+            <div class="name_products">
+                <span class="span_name"></span>
+                <input placeholder="Нова назва" class="change_name">
+            </div>
+            <div class="take_add">
+                <div class="buttons">
+                    <button data-tooltip="Відняти " class="minus tip"> - </button>
+                    <span class="count_select">1</span>
+                    <button class="plus tip" data-tooltip="Додати"> +
+                    </button>
+                </div>
+            </div>
+
+            <div class="to_buy">
+                <div class="buttons_two">
+                    <button data-tooltip="Купити" class="bought tip">Куплено</button>
+                    <button data-tooltip="Видалити" class="delete_product tip">X</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none" class="bought_">
+    <div class="product_bought">
+        <div class="product_div">
+            <div class="name_products">
+                <span style="text-decoration: line-through" class="span_name"></span>
+            </div>
+            <div class="take_add">
+                <div class="buttons">
+                    <span class="count_select">1</span>
+                </div>
+            </div>
+
+            <div class="to_buy">
+                <div class="buttons_two">
+                    <button data-tooltip="Відмінити" class="not_bought_  tip"> Не куплено</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="display: none" class="basket_unvisible">
+    <span class="we_can_buy">
+               <span class="basket_name">
+               </span>
+                  <span class="counter">
+                      1
+              </span>
+              </span>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
